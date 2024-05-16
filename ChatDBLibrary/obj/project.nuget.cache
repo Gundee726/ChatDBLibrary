@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "nS3I+j48AjctNSUbGD+IzhIttWQlAB0aFgZOqVBd8YLTOP+BelPXlgFuv02cQaPb2K90sTsxiksVCy5i/QRNEg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gundalai.b\\source\\repos\\ChatDBLibrary\\ChatDBLibrary\\ChatDBLibrary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gundalai.b\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\gundalai.b\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\gundalai.b\\.nuget\\packages\\npgsql\\8.0.3\\npgsql.8.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
