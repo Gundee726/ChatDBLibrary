@@ -12,7 +12,7 @@ namespace ChatDBLibrary
         private DBContext db;
         public UseDB()
         {
-            db = new("Server=127.0.0.1; Port=5432; Database=windows; User Id=postgres; Password=0726;");
+            db = new("Server=127.0.0.1; Port=5432; Database=public; User Id=postgres; Password=heroO726;");
         }   
     }
 }
