@@ -1,0 +1,271 @@
+﻿@page "/instagram"
+@rendermode InteractiveServer
+
+@using Microsoft.AspNetCore.SignalR.Client;
+@using Users
+@using ChatDBLibrary.Model
+@inject HttpClient Http
+
+<h3>Chat</h3>
+
+@if (messages != null)
+{
+    <div id="chat">
+        @foreach (var message in messages)
+        {
+            <div>@message.Sender_name: @message.Message</div>
+        }
+    </div>
+}
+else
+{
+    <p>Loading messages...</p>
+}
+
+@code {
+    private List<Messages> messages;
+    private int senderId = 1; // Replace with actual sender ID
+    private int receiverId = 2; // Replace with actual receiver ID
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadMessages();
+        // Start polling every 5 seconds
+        var timer = new System.Timers.Timer(5000);
+        timer.Elapsed += async (sender, e) => await LoadMessages();
+        timer.Start();
+    }
+
+    private async Task LoadMessages()
+    {
+        try
+        {
+            var response = await Http.GetAsync($"/messages?sender_id={senderId}&receiver_id={receiverId}");
+            if (response.IsSuccessStatusCode)
+            {
+                messages = await response.Content.ReadFromJsonAsync<List<Messages>>();
+                StateHasChanged(); // Notify Blazor to re-render the component
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching messages: {ex.Message}");
+        }
+    }
+}
+
+
+@*<h3>Instagram Chat</h3>
+
+<section class="messages-section">
+    <h2>Messages</h2>
+    <div class="messages-list">
+        @foreach (var user in new[] { "User1", "User2", "User3", "User4" })
+        {
+            <article class="message-item">
+                <img src="https://via.placeholder.com/40" alt="User Profile" class="user-img" />
+                <h3 class="user-name">@user</h3>
+            </article>
+        }
+    </div>
+</section>
+
+<section class="chat-section">
+    <h2>Chat with User</h2>
+    <div class="chat-box">
+        <div class="message received">
+            <p>Sainuu?</p>
+        </div>
+        <div class="message sent">
+            <p>Sain, sainuu?</p>
+        </div>
+        @foreach (var message in messages)
+        {
+            <div class="message received">
+                <p>@message</p>
+            </div>
+        }
+    </div>
+</section> 
+
+@if (users.Count > 0)
+{
+    <ul class="user-list">
+        @foreach (var userid in users)
+        {
+            <li>@userid</li>
+        }
+    </ul>
+}
+
+<footer class="chat-footer">
+    <label>
+        To:
+        <input @bind="toUser" placeholder="Enter User ID" class="to-input" />
+    </label>
+    <textarea placeholder="Type to chat..." @bind="sendingMessage" class="message-input"></textarea>
+    <button @onclick="OnSendChat" class="send-button">Send</button> 
+</footer>
+
+<style>
+    .messages-section, .chat-section {
+        margin-bottom: 20px;
+    }
+
+    .messages-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .message-item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .user-img {
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .user-name {
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+
+    .chat-box {
+        border: 1px solid #e6e6e6;
+        padding: 10px;
+        border-radius: 10px;
+        max-height: 300px;
+        overflow-y: auto;
+        background-color: #f9f9f9;
+    }
+
+    .message {
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 15px;
+        max-width: 75%;
+    }
+
+    .received {
+        background-color: #e6f7ff;
+        align-self: flex-start;
+    }
+
+    .sent {
+        background-color: #dcf8c6;
+        align-self: flex-end;
+    }
+
+    .chat-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #e6e6e6;
+        padding: 10px;
+        background-color: #ffffff;
+    }
+
+    .to-input, .message-input {
+        flex: 1;
+        margin-right: 10px;
+        padding: 10px;
+        border: 1px solid #e6e6e6;
+        border-radius: 5px;
+    }
+
+    .send-button {
+        background-color: #0095f6;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .send-button:hover {
+        background-color: #007bb5;
+    }
+</style>
+
+
+  <section>
+    <h2>Chat with User</h2>
+    <p class="received">
+        Sainuu?
+    </p>
+    <p class="sent">
+        Sain, sainuu?
+    </p>
+    @foreach (var message in messages)
+    {
+        <p>
+            @message
+        </p>
+    }
+</section> 
+
+ @if (users.Count > 0)
+{
+    <ul>
+        @foreach (var userid in users)
+        {
+            <li>
+                @userid
+            </li>
+        }
+    </ul>
+}
+<footer>
+    <label>
+        To:
+        <input @bind="toUser" />
+    </label>
+    <textarea placeholder="Type to chat..." @bind="sendingMessage" />
+    <button @onclick="OnSendChat">Send</button> 
+</footer>
+
+
+@code {
+
+    private HubConnection? hubConnection;
+    private string sendingMessage;
+    private List<string> messages;
+    private List<string> users;
+    private string toUser;
+
+    private async Task OnSendChat(MouseEventArgs e)
+    {
+        var user = new User(5, "User1", "", "@ChatMangas", toUser);
+        await hubConnection?.SendAsync("SendMessage", user, sendingMessage);
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        messages = new();
+        users = new();
+        hubConnection = new HubConnectionBuilder().WithUrl("https://localhost:7351/instagram/mainhub").Build();
+
+        hubConnection.On<User, string>("MessageReceived", OnMessageReceived);
+        hubConnection.On<string>("UserConnected", OnUserConnected);
+
+        await hubConnection.StartAsync();
+    }
+    private async Task OnMessageReceived(User user, string msg)
+    {
+        messages.Add(msg);
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async Task OnUserConnected(string userid)
+    {
+        Console.WriteLine($"User connected {userid}");
+
+        users.Add(userid);
+        await InvokeAsync(StateHasChanged);
+    }
+}*@

@@ -12,4 +12,13 @@ namespace ChatDBLibrary.Model
 
         public string Username { get; set; }
     }
+
+    public class Messages
+    {
+        public int Sender_id { get; set; }
+        public string Sender_name { get; set; }
+        public int Receiver_id { get; set; }
+        public string Receiver_name { get; set; }
+        public string Message { get; set; }
+    }
 }
