@@ -503,7 +503,10 @@
           "Npgsql": "8.0.3"
         },
         "runtime": {
-          "ChatDBLibrary.dll": {}
+          "ChatDBLibrary.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "DBTest/1.0.0": {
@@ -516,7 +519,10 @@
           "coverlet.collector": "6.0.0"
         },
         "runtime": {
-          "DBTest.dll": {}
+          "DBTest.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Users/1.0.0": {
@@ -524,7 +530,10 @@
           "Microsoft.AspNetCore.SignalR.Client": "8.0.7"
         },
         "runtime": {
-          "Users.dll": {}
+          "Users.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

@@ -1,271 +1,107 @@
 ﻿@page "/instagram"
-@rendermode InteractiveServer
 
-@using Microsoft.AspNetCore.SignalR.Client;
-@using Users
-@using ChatDBLibrary.Model
-@inject HttpClient Http
 
-<h3>Chat</h3>
 
-@if (messages != null)
-{
-    <div id="chat">
-        @foreach (var message in messages)
-        {
-            <div>@message.Sender_name: @message.Message</div>
-        }
-    </div>
-}
-else
-{
-    <p>Loading messages...</p>
-}
 
-@code {
-    private List<Messages> messages;
-    private int senderId = 1; // Replace with actual sender ID
-    private int receiverId = 2; // Replace with actual receiver ID
 
-    protected override async Task OnInitializedAsync()
-    {
-        await LoadMessages();
-        // Start polling every 5 seconds
-        var timer = new System.Timers.Timer(5000);
-        timer.Elapsed += async (sender, e) => await LoadMessages();
-        timer.Start();
-    }
+<PageTitle>Home</PageTitle>
 
-    private async Task LoadMessages()
-    {
-        try
-        {
-            var response = await Http.GetAsync($"/messages?sender_id={senderId}&receiver_id={receiverId}");
-            if (response.IsSuccessStatusCode)
+
+
+<div class="app-container">
+    <nav class="sidebar">
+        <div class="sidebar-header">ChatApp</div>
+        <div class="chat-list">
+            @foreach (var user in users)
             {
-                messages = await response.Content.ReadFromJsonAsync<List<Messages>>();
-                StateHasChanged(); // Notify Blazor to re-render the component
+                <div class="chat-list-item" @onclick="() => SelectUser(user)">
+                    <img src="@user.Avatar" class="chat-list-avatar" alt="@user.Name" />
+                    <div class="chat-list-info">
+                        <div class="chat-list-name">@user.Name</div>
+                    </div>
+                </div>
             }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Error fetching messages: {ex.Message}");
-        }
-    }
-}
-
-
-@*<h3>Instagram Chat</h3>
-
-<section class="messages-section">
-    <h2>Messages</h2>
-    <div class="messages-list">
-        @foreach (var user in new[] { "User1", "User2", "User3", "User4" })
-        {
-            <article class="message-item">
-                <img src="https://via.placeholder.com/40" alt="User Profile" class="user-img" />
-                <h3 class="user-name">@user</h3>
-            </article>
-        }
-    </div>
-</section>
-
-<section class="chat-section">
-    <h2>Chat with User</h2>
-    <div class="chat-box">
-        <div class="message received">
-            <p>Sainuu?</p>
         </div>
-        <div class="message sent">
-            <p>Sain, sainuu?</p>
+    </nav>
+    <main class="chat-main">
+        <div class="chat-header">@selectedUser?.Name</div>
+        <div class="chat-messages">
+            @foreach (var message in messages)
+            {
+                <div class="message @(message.Sender == "User1" ? "message-sent" : "message-received")">
+                    <span class="message-content">@message.Content</span>
+                </div>
+            }
         </div>
-        @foreach (var message in messages)
-        {
-            <div class="message received">
-                <p>@message</p>
-            </div>
-        }
-    </div>
-</section> 
-
-@if (users.Count > 0)
-{
-    <ul class="user-list">
-        @foreach (var userid in users)
-        {
-            <li>@userid</li>
-        }
-    </ul>
-}
-
-<footer class="chat-footer">
-    <label>
-        To:
-        <input @bind="toUser" placeholder="Enter User ID" class="to-input" />
-    </label>
-    <textarea placeholder="Type to chat..." @bind="sendingMessage" class="message-input"></textarea>
-    <button @onclick="OnSendChat" class="send-button">Send</button> 
-</footer>
-
-<style>
-    .messages-section, .chat-section {
-        margin-bottom: 20px;
-    }
-
-    .messages-list {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .message-item {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        border-bottom: 1px solid #e6e6e6;
-    }
-
-    .user-img {
-        border-radius: 50%;
-        margin-right: 10px;
-    }
-
-    .user-name {
-        font-size: 1.2em;
-        font-weight: 500;
-    }
-
-    .chat-box {
-        border: 1px solid #e6e6e6;
-        padding: 10px;
-        border-radius: 10px;
-        max-height: 300px;
-        overflow-y: auto;
-        background-color: #f9f9f9;
-    }
-
-    .message {
-        margin: 5px 0;
-        padding: 10px;
-        border-radius: 15px;
-        max-width: 75%;
-    }
-
-    .received {
-        background-color: #e6f7ff;
-        align-self: flex-start;
-    }
-
-    .sent {
-        background-color: #dcf8c6;
-        align-self: flex-end;
-    }
-
-    .chat-footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-top: 1px solid #e6e6e6;
-        padding: 10px;
-        background-color: #ffffff;
-    }
-
-    .to-input, .message-input {
-        flex: 1;
-        margin-right: 10px;
-        padding: 10px;
-        border: 1px solid #e6e6e6;
-        border-radius: 5px;
-    }
-
-    .send-button {
-        background-color: #0095f6;
-        color: #ffffff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .send-button:hover {
-        background-color: #007bb5;
-    }
-</style>
+        <div class="chat-input-container">
+            <input type="text" @bind="messageInput" @onkeydown="HandleKeyDown" placeholder="Type a message..." />
+            <button @onclick="SendMessage">Send</button>
+        </div>
+    </main>
+</div>
 
 
-  <section>
-    <h2>Chat with User</h2>
-    <p class="received">
-        Sainuu?
-    </p>
-    <p class="sent">
-        Sain, sainuu?
-    </p>
-    @foreach (var message in messages)
-    {
-        <p>
-            @message
-        </p>
-    }
-</section> 
 
- @if (users.Count > 0)
-{
-    <ul>
-        @foreach (var userid in users)
-        {
-            <li>
-                @userid
-            </li>
-        }
-    </ul>
-}
-<footer>
-    <label>
-        To:
-        <input @bind="toUser" />
-    </label>
-    <textarea placeholder="Type to chat..." @bind="sendingMessage" />
-    <button @onclick="OnSendChat">Send</button> 
-</footer>
 
 
 @code {
-
-    private HubConnection? hubConnection;
-    private string sendingMessage;
-    private List<string> messages;
-    private List<string> users;
-    private string toUser;
-
-    private async Task OnSendChat(MouseEventArgs e)
+    private string messageInput;
+    private User selectedUser;
+    private List<Message> messages = new List<Message>
     {
-        var user = new User(5, "User1", "", "@ChatMangas", toUser);
-        await hubConnection?.SendAsync("SendMessage", user, sendingMessage);
+        new Message { Sender = "User1", Content = "Hey there!" },
+        new Message { Sender = "User2", Content = "Hi! How are youuuuu?" }
+    };
+    private List<User> users = new List<User>
+    {
+        new User { Name = "User1", Avatar = "https://www.allkpop.com/upload/2021/03/content/072004/1615165452-lisa.jpg" },
+        new User { Name = "User2", Avatar = "https://www.allkpop.com/upload/2021/03/content/072004/1615165452-lisa.jpg" }
+    };
+
+
+
+    private void SendMessage()
+    {
+        if (!string.IsNullOrWhiteSpace(messageInput))
+        {
+            messages.Add(new Message { Sender = "User1", Content = messageInput });
+            messageInput = string.Empty;
+        }
     }
 
-    protected override async Task OnInitializedAsync()
+
+
+    private void HandleKeyDown(KeyboardEventArgs e)
     {
-
-        messages = new();
-        users = new();
-        hubConnection = new HubConnectionBuilder().WithUrl("https://localhost:7351/instagram/mainhub").Build();
-
-        hubConnection.On<User, string>("MessageReceived", OnMessageReceived);
-        hubConnection.On<string>("UserConnected", OnUserConnected);
-
-        await hubConnection.StartAsync();
-    }
-    private async Task OnMessageReceived(User user, string msg)
-    {
-        messages.Add(msg);
-        await InvokeAsync(StateHasChanged);
+        if (e.Key == "Enter")
+        {
+            SendMessage();
+        }
     }
 
-    private async Task OnUserConnected(string userid)
-    {
-        Console.WriteLine($"User connected {userid}");
 
-        users.Add(userid);
-        await InvokeAsync(StateHasChanged);
+
+    private void SelectUser(User user)
+    {
+        selectedUser = user;
+
+
+
     }
-}*@
+
+
+
+    private class Message
+    {
+        public string Sender { get; set; }
+        public string Content { get; set; }
+    }
+
+
+
+    private class User
+    {
+        public string Name { get; set; }
+        public string Avatar { get; set; }
+    }
+}
