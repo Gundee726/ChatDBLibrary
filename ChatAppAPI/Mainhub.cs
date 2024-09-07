@@ -12,6 +12,7 @@ namespace ChatAppAPI
         public Mainhub(LoggedUsers users, ILogger<Mainhub> logger)
         {
             loggedUsers = users;
+            //test pull
         }
 
         public async Task SendMessage(User toUser, string message)
