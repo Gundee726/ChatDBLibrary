@@ -3,22 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4DFD4E02-7CB8-4D07-819D-5632436DDFDD}|ChatAppUI\\ChatAppUI.csproj|C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\chatappui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DFD4E02-7CB8-4D07-819D-5632436DDFDD}|ChatAppUI\\ChatAppUI.csproj|solutionrelative:chatappui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BEE2188-9A57-4084-B4B4-8698027A50E4}|ChatDBLibrary\\ChatDBLibrary.csproj|C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\chatdblibrary\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BEE2188-9A57-4084-B4B4-8698027A50E4}|ChatDBLibrary\\ChatDBLibrary.csproj|solutionrelative:chatdblibrary\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BEE2188-9A57-4084-B4B4-8698027A50E4}|ChatDBLibrary\\ChatDBLibrary.csproj|C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\chatdblibrary\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BEE2188-9A57-4084-B4B4-8698027A50E4}|ChatDBLibrary\\ChatDBLibrary.csproj|solutionrelative:chatdblibrary\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|c:\\users\\dell\\source\\repos\\chatdblibrary\\chatappapi\\mainhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|solutionrelative:chatappapi\\mainhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4DFD4E02-7CB8-4D07-819D-5632436DDFDD}|ChatAppUI\\ChatAppUI.csproj|C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\chatappui\\components\\pages\\instagram.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4DFD4E02-7CB8-4D07-819D-5632436DDFDD}|ChatAppUI\\ChatAppUI.csproj|solutionrelative:chatappui\\components\\pages\\instagram.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -31,12 +15,48 @@
       "RelativeMoniker": "D:0:0:{5BEE2188-9A57-4084-B4B4-8698027A50E4}|ChatDBLibrary\\ChatDBLibrary.csproj|solutionrelative:chatdblibrary\\userda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\chatappapi\\loggedusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|solutionrelative:chatappapi\\loggedusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4DFD4E02-7CB8-4D07-819D-5632436DDFDD}|ChatAppUI\\ChatAppUI.csproj|c:\\users\\dell\\source\\repos\\chatdblibrary\\chatappui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DFD4E02-7CB8-4D07-819D-5632436DDFDD}|ChatAppUI\\ChatAppUI.csproj|solutionrelative:chatappui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BEE2188-9A57-4084-B4B4-8698027A50E4}|ChatDBLibrary\\ChatDBLibrary.csproj|C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\chatdblibrary\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BEE2188-9A57-4084-B4B4-8698027A50E4}|ChatDBLibrary\\ChatDBLibrary.csproj|solutionrelative:chatdblibrary\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55F39A6B-75E5-4EFD-9BFB-79CB89344836}|DBTest\\DBTest.csproj|C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\dbtest\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55F39A6B-75E5-4EFD-9BFB-79CB89344836}|DBTest\\DBTest.csproj|solutionrelative:dbtest\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|c:\\users\\dell\\source\\repos\\chatdblibrary\\chatappapi\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|solutionrelative:chatappapi\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|c:\\users\\dell\\source\\repos\\chatdblibrary\\chatappapi\\messagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|solutionrelative:chatappapi\\messagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|c:\\users\\dell\\source\\repos\\chatdblibrary\\chatappapi\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|solutionrelative:chatappapi\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\chatappapi\\chatappapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|solutionrelative:chatappapi\\chatappapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\chatappapi\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|solutionrelative:chatappapi\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DFD4E02-7CB8-4D07-819D-5632436DDFDD}|ChatAppUI\\ChatAppUI.csproj|c:\\users\\dell\\source\\repos\\chatdblibrary\\chatappui\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4DFD4E02-7CB8-4D07-819D-5632436DDFDD}|ChatAppUI\\ChatAppUI.csproj|solutionrelative:chatappui\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|c:\\users\\dell\\source\\repos\\chatdblibrary\\chatappapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|solutionrelative:chatappapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BEE2188-9A57-4084-B4B4-8698027A50E4}|ChatDBLibrary\\ChatDBLibrary.csproj|C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\chatdblibrary\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BEE2188-9A57-4084-B4B4-8698027A50E4}|ChatDBLibrary\\ChatDBLibrary.csproj|solutionrelative:chatdblibrary\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\chatappapi\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,14 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\chatappapi\\chatappapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|solutionrelative:chatappapi\\chatappapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\chatappapi\\chatappapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|solutionrelative:chatappapi\\chatappapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\chatappapi\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4640FFBB-FB16-4836-B18E-E3579CB2E3BA}|ChatAppAPI\\ChatAppAPI.csproj|solutionrelative:chatappapi\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4DFD4E02-7CB8-4D07-819D-5632436DDFDD}|ChatAppUI\\ChatAppUI.csproj|C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\chatappui\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -114,7 +126,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -130,57 +142,176 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Mainhub.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\Mainhub.cs",
-              "RelativeDocumentMoniker": "ChatAppAPI\\Mainhub.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\Mainhub.cs",
-              "RelativeToolTip": "ChatAppAPI\\Mainhub.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "DocumentIndex": 6,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\UserController.cs",
+              "RelativeDocumentMoniker": "ChatAppAPI\\UserController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\UserController.cs",
+              "RelativeToolTip": "ChatAppAPI\\UserController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-06T05:15:06.373Z",
+              "WhenOpened": "2024-09-07T05:33:37.818Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Instagram.razor",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\Components\\Pages\\Instagram.razor",
-              "RelativeDocumentMoniker": "ChatAppUI\\Components\\Pages\\Instagram.razor",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\Components\\Pages\\Instagram.razor",
-              "RelativeToolTip": "ChatAppUI\\Components\\Pages\\Instagram.razor",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAAAF8AAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T04:24:29.56Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatDBLibrary\\Model\\User.cs",
               "RelativeDocumentMoniker": "ChatDBLibrary\\Model\\User.cs",
               "ToolTip": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatDBLibrary\\Model\\User.cs",
               "RelativeToolTip": "ChatDBLibrary\\Model\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAVAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-16T04:31:03.025Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\Program.cs",
+              "RelativeDocumentMoniker": "ChatAppAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\Program.cs",
+              "RelativeToolTip": "ChatAppAPI\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEIAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T09:34:13.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Instagram.razor",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\Components\\Pages\\Instagram.razor",
+              "RelativeDocumentMoniker": "ChatAppUI\\Components\\Pages\\Instagram.razor",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\Components\\Pages\\Instagram.razor",
+              "RelativeToolTip": "ChatAppUI\\Components\\Pages\\Instagram.razor",
+              "ViewState": "AQIAACgAAAAAAAAAAAAwwEEAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T04:24:29.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserDA.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatDBLibrary\\UserDA.cs",
+              "RelativeDocumentMoniker": "ChatDBLibrary\\UserDA.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatDBLibrary\\UserDA.cs",
+              "RelativeToolTip": "ChatDBLibrary\\UserDA.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T03:47:52.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\DBTest\\UnitTest1.cs",
               "RelativeDocumentMoniker": "DBTest\\UnitTest1.cs",
               "ToolTip": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\DBTest\\UnitTest1.cs",
               "RelativeToolTip": "DBTest\\UnitTest1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T04:37:32.223Z"
+              "WhenOpened": "2024-05-16T04:37:32.223Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\Program.cs",
+              "RelativeDocumentMoniker": "ChatAppUI\\Program.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\Program.cs",
+              "RelativeToolTip": "ChatAppUI\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T04:48:44.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MessagesController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\MessagesController.cs",
+              "RelativeDocumentMoniker": "ChatAppAPI\\MessagesController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\MessagesController.cs",
+              "RelativeToolTip": "ChatAppAPI\\MessagesController.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAABwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-07T05:53:34.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "ChatAppAPI\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\ApplicationDbContext.cs",
+              "RelativeToolTip": "ChatAppAPI\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-07T06:08:52.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ChatAppAPI.csproj",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\ChatAppAPI.csproj",
+              "RelativeDocumentMoniker": "ChatAppAPI\\ChatAppAPI.csproj",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\ChatAppAPI.csproj",
+              "RelativeToolTip": "ChatAppAPI\\ChatAppAPI.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-01T10:31:08.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserContext.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\UserContext.cs",
+              "RelativeDocumentMoniker": "ChatAppAPI\\UserContext.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\UserContext.cs",
+              "RelativeToolTip": "ChatAppAPI\\UserContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T09:33:29.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "ChatAppUI\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "ChatAppUI\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-07T04:28:04.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "ChatAppAPI\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "ChatAppAPI\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-07T04:27:40.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "DBContext.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatDBLibrary\\DBContext.cs",
               "RelativeDocumentMoniker": "ChatDBLibrary\\DBContext.cs",
@@ -192,57 +323,12 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\Program.cs",
-              "RelativeDocumentMoniker": "ChatAppUI\\Program.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\Program.cs",
-              "RelativeToolTip": "ChatAppUI\\Program.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-06T04:48:44.486Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserDA.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatDBLibrary\\UserDA.cs",
-              "RelativeDocumentMoniker": "ChatDBLibrary\\UserDA.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatDBLibrary\\UserDA.cs",
-              "RelativeToolTip": "ChatDBLibrary\\UserDA.cs",
-              "ViewState": "AQIAADoAAAAAAAAAAAAuwFUAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T03:47:52.292Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LoggedUsers.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\LoggedUsers.cs",
-              "RelativeDocumentMoniker": "ChatAppAPI\\LoggedUsers.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\LoggedUsers.cs",
-              "RelativeToolTip": "ChatAppAPI\\LoggedUsers.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T09:32:28.715Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\Program.cs",
-              "RelativeDocumentMoniker": "ChatAppAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\Program.cs",
-              "RelativeToolTip": "ChatAppAPI\\Program.cs",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAAAGsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T09:34:13.332Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "ValuesController.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\Controllers\\ValuesController.cs",
               "RelativeDocumentMoniker": "ChatAppAPI\\Controllers\\ValuesController.cs",
@@ -250,23 +336,12 @@
               "RelativeToolTip": "ChatAppAPI\\Controllers\\ValuesController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-01T10:45:58.902Z"
+              "WhenOpened": "2024-09-01T10:45:58.902Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ChatAppAPI",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\ChatAppAPI.csproj",
-              "RelativeDocumentMoniker": "ChatAppAPI\\ChatAppAPI.csproj",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\ChatAppAPI.csproj",
-              "RelativeToolTip": "ChatAppAPI\\ChatAppAPI.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-09-01T10:31:08.385Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "ChatAppAPI\\Controllers\\WeatherForecastController.cs",
@@ -274,11 +349,12 @@
               "RelativeToolTip": "ChatAppAPI\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T13:03:10.296Z"
+              "WhenOpened": "2024-08-20T13:03:10.296Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\Components\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "ChatAppUI\\Components\\Layout\\NavMenu.razor",
@@ -286,11 +362,12 @@
               "RelativeToolTip": "ChatAppUI\\Components\\Layout\\NavMenu.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAwwBwAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T04:30:58.2Z"
+              "WhenOpened": "2024-08-06T04:30:58.2Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\Components\\Layout\\MainLayout.razor",
               "RelativeDocumentMoniker": "ChatAppUI\\Components\\Layout\\MainLayout.razor",
@@ -298,11 +375,12 @@
               "RelativeToolTip": "ChatAppUI\\Components\\Layout\\MainLayout.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T04:47:14.638Z"
+              "WhenOpened": "2024-08-06T04:47:14.638Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "ChatAppAPI.http",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\ChatAppAPI.http",
               "RelativeDocumentMoniker": "ChatAppAPI\\ChatAppAPI.http",
@@ -310,23 +388,12 @@
               "RelativeToolTip": "ChatAppAPI\\ChatAppAPI.http",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-08-20T13:03:17.931Z"
+              "WhenOpened": "2024-08-20T13:03:17.931Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UserContext.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\UserContext.cs",
-              "RelativeDocumentMoniker": "ChatAppAPI\\UserContext.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\UserContext.cs",
-              "RelativeToolTip": "ChatAppAPI\\UserContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T09:33:29.189Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "Counter.razor",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\Components\\Pages\\Counter.razor",
               "RelativeDocumentMoniker": "ChatAppUI\\Components\\Pages\\Counter.razor",
@@ -334,11 +401,12 @@
               "RelativeToolTip": "ChatAppUI\\Components\\Pages\\Counter.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T04:27:33.43Z"
+              "WhenOpened": "2024-08-06T04:27:33.43Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "Conversations.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatDBLibrary\\Model\\Conversations.cs",
               "RelativeDocumentMoniker": "ChatDBLibrary\\Model\\Conversations.cs",
@@ -346,11 +414,12 @@
               "RelativeToolTip": "ChatDBLibrary\\Model\\Conversations.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T05:26:44.219Z"
+              "WhenOpened": "2024-05-16T05:26:44.219Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\appsettings.json",
               "RelativeDocumentMoniker": "ChatAppAPI\\appsettings.json",
@@ -358,15 +427,12 @@
               "RelativeToolTip": "ChatAppAPI\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-20T13:09:00.372Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+              "WhenOpened": "2024-08-20T13:09:00.372Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "_Imports.razor",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\Components\\_Imports.razor",
               "RelativeDocumentMoniker": "ChatAppUI\\Components\\_Imports.razor",
@@ -374,11 +440,12 @@
               "RelativeToolTip": "ChatAppUI\\Components\\_Imports.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T04:59:32.985Z"
+              "WhenOpened": "2024-08-06T04:59:32.985Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "App.razor",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\Components\\App.razor",
               "RelativeDocumentMoniker": "ChatAppUI\\Components\\App.razor",
@@ -386,11 +453,12 @@
               "RelativeToolTip": "ChatAppUI\\Components\\App.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T04:59:30.553Z"
+              "WhenOpened": "2024-08-06T04:59:30.553Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\Users\\User.cs",
               "RelativeDocumentMoniker": "Users\\User.cs",
@@ -398,11 +466,12 @@
               "RelativeToolTip": "Users\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-06T04:33:19.533Z"
+              "WhenOpened": "2024-08-06T04:33:19.533Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "Routes.razor",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\Components\\Routes.razor",
               "RelativeDocumentMoniker": "ChatAppUI\\Components\\Routes.razor",
@@ -410,11 +479,12 @@
               "RelativeToolTip": "ChatAppUI\\Components\\Routes.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T04:59:26.583Z"
+              "WhenOpened": "2024-08-06T04:59:26.583Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppAPI\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "ChatAppAPI\\WeatherForecast.cs",
@@ -422,11 +492,12 @@
               "RelativeToolTip": "ChatAppAPI\\WeatherForecast.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T13:02:45.756Z"
+              "WhenOpened": "2024-08-20T13:02:45.756Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "UseDB.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatDBLibrary\\UseDB.cs",
               "RelativeDocumentMoniker": "ChatDBLibrary\\UseDB.cs",
@@ -434,11 +505,12 @@
               "RelativeToolTip": "ChatDBLibrary\\UseDB.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T04:45:49.059Z"
+              "WhenOpened": "2024-05-16T04:45:49.059Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\Components\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "ChatAppUI\\Components\\Pages\\Home.razor",
@@ -446,7 +518,8 @@
               "RelativeToolTip": "ChatAppUI\\Components\\Pages\\Home.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T04:20:45.978Z"
+              "WhenOpened": "2024-08-06T04:20:45.978Z",
+              "EditorCaption": ""
             }
           ]
         }

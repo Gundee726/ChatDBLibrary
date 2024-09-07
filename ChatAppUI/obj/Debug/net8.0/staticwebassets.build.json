@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "o2zlut5f4KfKMAw/JkMUAP52byOV4x7d8IA+4gKAUlw=",
+  "Hash": "bwaRHsfw9W3THTMMmr+Wcmc0jNefHqK1WUgT3IEIA7Y=",
   "Source": "ChatAppUI",
   "BasePath": "_content/ChatAppUI",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ChatAppUI\\wwwroot",
       "Source": "ChatAppUI",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\husle\\source\\repos\\new\\ChatAppUI\\wwwroot\\",
       "BasePath": "_content/ChatAppUI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ChatAppUI.styles.css",
+      "Identity": "C:\\Users\\husle\\source\\repos\\new\\ChatAppUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ChatAppUI.styles.css",
       "SourceId": "ChatAppUI",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\husle\\source\\repos\\new\\ChatAppUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/ChatAppUI",
       "RelativePath": "ChatAppUI.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ChatAppUI.styles.css"
+      "OriginalItemSpec": "C:\\Users\\husle\\source\\repos\\new\\ChatAppUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ChatAppUI.styles.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ChatAppUI.bundle.scp.css",
+      "Identity": "C:\\Users\\husle\\source\\repos\\new\\ChatAppUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ChatAppUI.bundle.scp.css",
       "SourceId": "ChatAppUI",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\husle\\source\\repos\\new\\ChatAppUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/ChatAppUI",
       "RelativePath": "ChatAppUI.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ChatAppUI.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\husle\\source\\repos\\new\\ChatAppUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ChatAppUI.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\wwwroot\\app.css",
+      "Identity": "C:\\Users\\husle\\source\\repos\\new\\ChatAppUI\\wwwroot\\app.css",
       "SourceId": "ChatAppUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\husle\\source\\repos\\new\\ChatAppUI\\wwwroot\\",
       "BasePath": "_content/ChatAppUI",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\husle\\source\\repos\\new\\ChatAppUI\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "ChatAppUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\husle\\source\\repos\\new\\ChatAppUI\\wwwroot\\",
       "BasePath": "_content/ChatAppUI",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\husle\\source\\repos\\new\\ChatAppUI\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "ChatAppUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\husle\\source\\repos\\new\\ChatAppUI\\wwwroot\\",
       "BasePath": "_content/ChatAppUI",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\husle\\source\\repos\\new\\ChatAppUI\\wwwroot\\favicon.png",
       "SourceId": "ChatAppUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\husle\\source\\repos\\new\\ChatAppUI\\wwwroot\\",
       "BasePath": "_content/ChatAppUI",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
