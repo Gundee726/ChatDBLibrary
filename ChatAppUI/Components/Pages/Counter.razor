@@ -1,19 +1,108 @@
 ﻿@page "/counter"
 @rendermode InteractiveServer
 
-<PageTitle>Counter</PageTitle>
+<PageTitle>Sign Up</PageTitle>
 
-<h1>Counter</h1>
+<style>
+    .signup-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(to right, #f5c6f6, #dcbef5); /* Pastel pink and purple gradient */
+    }
 
-<p role="status">Current count: @currentCount</p>
+    .signup-box {
+        width: 400px;
+        padding: 40px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    }
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+        .signup-box h2 {
+            color: #a390f5; /* Pastel purple */
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .signup-box input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #e2d7f9;
+            border-radius: 4px;
+        }
+
+        .signup-box label {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .signup-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #f5a2c6; /* Soft pink */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+            .signup-box button:hover {
+                background-color: #f084b0; /* Slightly darker pink on hover */
+            }
+
+        .signup-box .actions {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+            .signup-box .actions a {
+                color: #a390f5; /* Pastel purple */
+                text-decoration: none;
+            }
+
+                .signup-box .actions a:hover {
+                    text-decoration: underline;
+                }
+</style>
+
+<div class="signup-container">
+    <div class="signup-box">
+        <h2>Sign Up</h2>
+
+        <div>
+            <label>Username</label>
+            <input type="text" placeholder="Enter your username" />
+
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email" />
+
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password" />
+
+            <button @onclick="SignUp">SIGN UP</button>
+
+            <div class="actions">
+                <a href="/" @onclick="NavigateToLogin">Back to Login</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 @code {
-    private int currentCount = 0;
+    [Inject]
+    private NavigationManager Navigation { get; set; }
 
-    private void IncrementCount()
+    private void SignUp()
     {
-        currentCount++;
+        // Handle sign-up logic here.
+    }
+
+    private void NavigateToLogin()
+    {
+        Navigation.NavigateTo("/");
     }
 }

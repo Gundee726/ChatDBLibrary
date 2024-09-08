@@ -1,7 +1,173 @@
 ﻿@page "/"
+@using System.ComponentModel.DataAnnotations
+@inject NavigationManager Navigation
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Login</PageTitle>
 
-<h1>Hello, world!</h1>
+<style>
+    .container {
+        display: flex;
+        height: 100vh;
+        background: linear-gradient(to right, #f78fb3, #a390f5);
+        justify-content: center;
+        align-items: center;
+    }
 
-Welcome to your new app.
+    .left-panel {
+        width: 50%;
+        background-color: lightpink;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px;
+    }
+
+        .left-panel h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .left-panel p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+    .right-panel {
+        width: 50%;
+        background-color: white;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+        .right-panel h2 {
+            font-size: 28px;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+    .remember-me {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+        .remember-me input {
+            margin-right: 10px;
+        }
+
+    .login-btn {
+        width: 100%;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+        .login-btn:hover {
+            background-color: #0056b3;
+        }
+
+    .signup-link {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+        .signup-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+            .signup-link a:hover {
+                text-decoration: underline;
+            }
+
+    .forgot-password {
+        text-align: right;
+    }
+
+        .forgot-password a {
+            color: #aaa;
+            text-decoration: none;
+        }
+
+            .forgot-password a:hover {
+                color: #333;
+            }
+</style>
+
+<div class="container">
+    <div class="left-panel">
+        <h1>Welcome to...</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <div class="right-panel">
+        <h2>Login</h2>
+        <p>Welcome! Login to chat with people you love</p>
+
+        <EditForm Model="@loginModel" OnValidSubmit="HandleLogin">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="form-group">
+                <InputText class="form-control" placeholder="User Name" @bind-Value="loginModel.Username" />
+            </div>
+
+            <div class="form-group">
+                <InputText class="form-control" placeholder="Password" @bind-Value="loginModel.Password" type="password" />
+            </div>
+
+            <div class="remember-me">
+                <InputCheckbox @bind-Value="rememberMe" /> <label>Remember me</label>
+            </div>
+
+            <button type="submit" class="login-btn">LOGIN</button>
+        </EditForm>
+
+        <div class="signup-link">
+            <span>New User? <a href="/counter">Signup</a></span>
+        </div>
+
+        <div class="forgot-password">
+            <a href="#">Forgot your password?</a>
+        </div>
+    </div>
+</div>
+
+@code {
+    private LoginModel loginModel = new LoginModel();
+    private bool rememberMe = false;
+
+    private void HandleLogin()
+    {
+        // Handle the login logic here (e.g., API calls, validation, etc.)
+    }
+
+    public class LoginModel
+    {
+        [Required(ErrorMessage = "Username is required")]
+        public string Username { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Password is required")]
+        public string Password { get; set; } = string.Empty;
+    }
+}
