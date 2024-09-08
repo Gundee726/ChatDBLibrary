@@ -6,25 +6,40 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddAuthorization();
+// Load configuration
+var configuration = builder.Configuration;
+
+// Register ApplicationDbContext with DI
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
+
+// Register other services
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "My API",
+        Version = "v1"
+    });
 });
 
+// Configure CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("BlazorFront", policy =>
     {
-        policy.WithOrigins("https://localhost:7153")
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+        policy.WithOrigins("https://localhost:5041")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
     });
 });
 
@@ -33,7 +48,13 @@ builder.Services.AddResponseCompression(options =>
 {
     options.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(new[] { "application/octet-stream" });
 });
-builder.Services.AddSingleton<LoggedUsers>();
+
+// Register UserDA with DI
+builder.Services.AddScoped<UserDA>(provider =>
+{
+    var connectionString = configuration.GetConnectionString("DefaultConnection");
+    return new UserDA(connectionString);
+});
 
 var app = builder.Build();
 
@@ -49,55 +70,66 @@ if (app.Environment.IsDevelopment())
 
 app.UseResponseCompression();
 app.UseHttpsRedirection();
-app.UseAuthorization();
+
+// Apply CORS policy
 app.UseCors("BlazorFront");
 
-app.MapHub<Mainhub>("/mainhub");
+app.UseAuthorization();
 
+// Map controllers
+app.MapControllers();
 
-app.MapGet("/", (HttpContext cntx, LoggedUsers users) =>
+// Map other endpoints
+app.MapGet("/users", async (HttpContext http) =>
 {
-    int newuserid = 0;
-    users.users.TryAdd(newuserid, new UserContext { Id = newuserid++ });
-    return Results.Ok();
-});
-
-app.MapGet("/users", (HttpContext http) =>
-{
-    UserDA userDA = new UserDA("Server=127.0.0.1; Port=5432; Database=postgres; User Id=postgres; Password=heroO726;");
-    var users = userDA.GetUsers();
-
-    http.Response.StatusCode = 200;
-    return users;
-})
-.WithDescription("Get all users from db");
-
-app.MapGet("/messages", (HttpContext http) =>
-{
-    var senderId = http.Request.Query["sender_id"];
-    var receiverId = http.Request.Query["receiver_id"];
-
-    if (string.IsNullOrEmpty(senderId) || string.IsNullOrEmpty(receiverId))
+    var currentUserIdStr = http.Request.Query["currentUserId"];
+    if (!int.TryParse(currentUserIdStr, out int currentUserId))
     {
-        http.Response.StatusCode = 400; // Bad Request
-        
+        return Results.BadRequest("Invalid or missing currentUserId");
     }
 
-    UserDA userDA = new UserDA("Server=127.0.0.1; Port=5432; Database=postgres; User Id=postgres; Password=heroO726;");
-    var messages = userDA.GetMessages(int.Parse(senderId), int.Parse(receiverId));
+    try
+    {
+        var userDA = http.RequestServices.GetRequiredService<UserDA>();
+        var users = userDA.GetUsers(currentUserId);
+        return Results.Ok(users);
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error fetching users: {ex.Message}");
+        return Results.Problem($"Error fetching users: {ex.Message}", statusCode: 500);
+    }
+})
+.WithDescription("Get users who have interacted with the current user");
 
-    http.Response.StatusCode = 200;
-    return messages;
+app.MapGet("/messages", async (HttpContext http) =>
+{
+    var senderIdStr = http.Request.Query["sender_id"];
+    var receiverIdStr = http.Request.Query["receiver_id"];
+
+    if (!int.TryParse(senderIdStr, out int senderId) || !int.TryParse(receiverIdStr, out int receiverId))
+    {
+        return Results.BadRequest("Invalid or missing sender_id or receiver_id");
+    }
+
+    try
+    {
+        var userDA = http.RequestServices.GetRequiredService<UserDA>();
+        var messages = userDA.GetMessages(senderId, receiverId);
+        return Results.Ok(messages);
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error fetching messages: {ex.Message}");
+        return Results.Problem($"Error fetching messages: {ex.Message}", statusCode: 500);
+    }
 })
 .WithDescription("Get messages between two users from db");
 
-
-// Add a new message
-app.MapPost("/messages", async (HttpContext http) =>
+app.MapPost("/addmessages", async (HttpContext http) =>
 {
-    UserDA userDA = new UserDA("Server=127.0.0.1; Port=5432; Database=postgres; User Id=postgres; Password=heroO726;");
+    var userDA = http.RequestServices.GetRequiredService<UserDA>();
 
-    // Read the request body
     var message = await http.Request.ReadFromJsonAsync<Messages>();
 
     if (message == null || message.Sender_id <= 0 || message.Receiver_id <= 0 || string.IsNullOrWhiteSpace(message.Message))
@@ -106,11 +138,18 @@ app.MapPost("/messages", async (HttpContext http) =>
         return "Invalid message data";
     }
 
-    // Add the message to the database
-    userDA.AddMessage(message);
-
-    http.Response.StatusCode = 201;
-    return "Message added successfully";
+    try
+    {
+        userDA.AddMessage(message);
+        http.Response.StatusCode = 201;
+        return "Message added successfully";
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error adding message: {ex.Message}");
+        http.Response.StatusCode = 500;
+        return "Error adding message";
+    }
 })
 .WithDescription("Add a new message to the db");
 

@@ -10,17 +10,24 @@ namespace ChatDBLibrary
         }
         public string connectionString { get; set; }
 
-        public IEnumerable<User> GetUsers()
+        public IEnumerable<User> GetUsers(int currentUserId)
         {
             List<User> users = new List<User>();
-            using(var conn = new NpgsqlConnection(connectionString))
+            using (var conn = new NpgsqlConnection(connectionString))
             {
-                var cmdGetUsers = new NpgsqlCommand("SELECT user_id, username FROM chatapp_user;", conn);
+                var cmdGetUsers = new NpgsqlCommand(@"
+            SELECT DISTINCT u.user_id, u.username
+            FROM chatapp_user u
+            JOIN chathistory ch ON u.user_id = ch.receiver_id OR u.user_id = ch.sender_id
+            WHERE (ch.sender_id = @currentUserId OR ch.receiver_id = @currentUserId)
+              AND u.user_id != @currentUserId;", conn);
+
+                cmdGetUsers.Parameters.AddWithValue("currentUserId", currentUserId);
 
                 conn.Open();
                 var rdr = cmdGetUsers.ExecuteReader();
 
-                while(rdr.Read())
+                while (rdr.Read())
                 {
                     var user = new User()
                     {
@@ -35,6 +42,7 @@ namespace ChatDBLibrary
             }
             return users;
         }
+
 
         public IEnumerable<Messages> GetMessages()
         {
@@ -51,9 +59,9 @@ namespace ChatDBLibrary
                     var message = new Messages()
                     {
                         Sender_id = rdr.GetInt32(0),
-                        Sender_name = rdr.GetString(1),
+                        
                         Receiver_id = rdr.GetInt32(2),
-                        Receiver_name = rdr.GetString(3),
+                        
                     };
 
                     messages.Add(message);
@@ -70,7 +78,7 @@ namespace ChatDBLibrary
             using (var conn = new NpgsqlConnection(connectionString))
             {
                 var cmdGetMessages = new NpgsqlCommand(@"
-            SELECT ch.sender_id, sender.username AS sender_name, ch.receiver_id, receiver.username AS receiver_name, ch.message_content
+            SELECT ch.sender_id, sender.username AS sender_name, ch.receiver_id, receiver.username AS receiver_name, ch.message
             FROM chathistory ch
             JOIN chatapp_user sender ON ch.sender_id = sender.user_id
             JOIN chatapp_user receiver ON ch.receiver_id = receiver.user_id
@@ -88,9 +96,9 @@ namespace ChatDBLibrary
                     var message = new Messages()
                     {
                         Sender_id = rdr.GetInt32(0),
-                        Sender_name = rdr.GetString(1),
+                        
                         Receiver_id = rdr.GetInt32(2),
-                        Receiver_name = rdr.GetString(3),
+                        
                         Message = rdr.GetString(4)
                     };
 

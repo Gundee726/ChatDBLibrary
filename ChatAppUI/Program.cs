@@ -1,44 +1,36 @@
 using ChatAppUI.Components;
 
-
-
 var builder = WebApplication.CreateBuilder(args);
-
-
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-builder.Services.AddHttpClient(); // Register HttpClient here
 
+// Register HttpClient with a base address
+builder.Services.AddHttpClient("ServerAPI", client =>
+{
+    client.BaseAddress = new Uri("https://localhost:7153/");
+});
 
+// Add controllers (MVC services)
+builder.Services.AddControllers();
 
 var app = builder.Build();
-
-
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
-
-
 app.UseHttpsRedirection();
-
-
-
 app.UseStaticFiles();
 app.UseAntiforgery();
 
-
+app.MapControllers(); 
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
-
-
 
 app.Run();

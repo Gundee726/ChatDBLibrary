@@ -152,3 +152,7 @@ C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\obj\Debug\net8.0\refint\Chat
 C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\obj\Debug\net8.0\ChatAppAPI.pdb
 C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\obj\Debug\net8.0\ChatAppAPI.genruntimeconfig.cache
 C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\obj\Debug\net8.0\ref\ChatAppAPI.dll
+C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

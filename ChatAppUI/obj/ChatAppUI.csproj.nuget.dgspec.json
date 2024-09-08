@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\husle\\source\\repos\\new\\ChatAppUI\\ChatAppUI.csproj": {}
+    "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\ChatAppUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\husle\\source\\repos\\new\\ChatAppUI\\ChatAppUI.csproj": {
+    "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\ChatAppUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\husle\\source\\repos\\new\\ChatAppUI\\ChatAppUI.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\ChatAppUI.csproj",
         "projectName": "ChatAppUI",
-        "projectPath": "C:\\Users\\husle\\source\\repos\\new\\ChatAppUI\\ChatAppUI.csproj",
-        "packagesPath": "C:\\Users\\husle\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\husle\\source\\repos\\new\\ChatAppUI\\obj\\",
+        "projectPath": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\ChatAppUI.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\husle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,21 +26,20 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\husle\\source\\repos\\new\\ChatDBLibrary\\ChatDBLibrary.csproj": {
-                "projectPath": "C:\\Users\\husle\\source\\repos\\new\\ChatDBLibrary\\ChatDBLibrary.csproj"
+              "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatDBLibrary\\ChatDBLibrary.csproj": {
+                "projectPath": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatDBLibrary\\ChatDBLibrary.csproj"
               },
-              "C:\\Users\\husle\\source\\repos\\new\\DBTest\\DBTest.csproj": {
-                "projectPath": "C:\\Users\\husle\\source\\repos\\new\\DBTest\\DBTest.csproj"
+              "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\DBTest\\DBTest.csproj": {
+                "projectPath": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\DBTest\\DBTest.csproj"
               },
-              "C:\\Users\\husle\\source\\repos\\new\\Users\\Users.csproj": {
-                "projectPath": "C:\\Users\\husle\\source\\repos\\new\\Users\\Users.csproj"
+              "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\Users\\Users.csproj": {
+                "projectPath": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\Users\\Users.csproj"
               }
             }
           }
@@ -63,6 +62,14 @@
             "Microsoft.AspNetCore.SignalR.Client": {
               "target": "Package",
               "version": "[8.0.7, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.4, )"
             }
           },
           "imports": [
@@ -84,24 +91,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\husle\\source\\repos\\new\\ChatDBLibrary\\ChatDBLibrary.csproj": {
+    "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatDBLibrary\\ChatDBLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\husle\\source\\repos\\new\\ChatDBLibrary\\ChatDBLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatDBLibrary\\ChatDBLibrary.csproj",
         "projectName": "ChatDBLibrary",
-        "projectPath": "C:\\Users\\husle\\source\\repos\\new\\ChatDBLibrary\\ChatDBLibrary.csproj",
-        "packagesPath": "C:\\Users\\husle\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\husle\\source\\repos\\new\\ChatDBLibrary\\obj\\",
+        "projectPath": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatDBLibrary\\ChatDBLibrary.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatDBLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\husle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -110,7 +117,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -159,24 +165,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\husle\\source\\repos\\new\\DBTest\\DBTest.csproj": {
+    "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\DBTest\\DBTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\husle\\source\\repos\\new\\DBTest\\DBTest.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\DBTest\\DBTest.csproj",
         "projectName": "DBTest",
-        "projectPath": "C:\\Users\\husle\\source\\repos\\new\\DBTest\\DBTest.csproj",
-        "packagesPath": "C:\\Users\\husle\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\husle\\source\\repos\\new\\DBTest\\obj\\",
+        "projectPath": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\DBTest\\DBTest.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\DBTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\husle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -185,15 +191,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\husle\\source\\repos\\new\\ChatDBLibrary\\ChatDBLibrary.csproj": {
-                "projectPath": "C:\\Users\\husle\\source\\repos\\new\\ChatDBLibrary\\ChatDBLibrary.csproj"
+              "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatDBLibrary\\ChatDBLibrary.csproj": {
+                "projectPath": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatDBLibrary\\ChatDBLibrary.csproj"
               }
             }
           }
@@ -250,24 +255,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\husle\\source\\repos\\new\\Users\\Users.csproj": {
+    "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\Users\\Users.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\husle\\source\\repos\\new\\Users\\Users.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\Users\\Users.csproj",
         "projectName": "Users",
-        "projectPath": "C:\\Users\\husle\\source\\repos\\new\\Users\\Users.csproj",
-        "packagesPath": "C:\\Users\\husle\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\husle\\source\\repos\\new\\Users\\obj\\",
+        "projectPath": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\Users\\Users.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\Users\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\husle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -276,7 +281,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -321,7 +325,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

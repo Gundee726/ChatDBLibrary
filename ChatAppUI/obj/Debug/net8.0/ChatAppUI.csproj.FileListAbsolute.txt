@@ -290,3 +290,7 @@ C:\Users\husle\source\repos\new\ChatAppUI\obj\Debug\net8.0\refint\ChatAppUI.dll
 C:\Users\husle\source\repos\new\ChatAppUI\obj\Debug\net8.0\ChatAppUI.pdb
 C:\Users\husle\source\repos\new\ChatAppUI\obj\Debug\net8.0\ChatAppUI.genruntimeconfig.cache
 C:\Users\husle\source\repos\new\ChatAppUI\obj\Debug\net8.0\ref\ChatAppUI.dll
+C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppUI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppUI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppUI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppUI\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
