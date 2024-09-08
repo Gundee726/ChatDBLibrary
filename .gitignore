@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/ChatDBLibrary/DesignTimeBuild/.dtbcache.v2
+/.vs/ChatDBLibrary/FileContentIndex/03f0329a-d064-4d24-b569-be3a8a3b87fb.vsidx
+/.vs/ChatDBLibrary/FileContentIndex/791f58d6-fd4c-444e-bcb6-7e807fef30ce.vsidx
+/.vs/ChatDBLibrary/FileContentIndex/a8cb94ed-9878-46b0-9b16-6262caebd7eb.vsidx
+/.vs/ChatDBLibrary/FileContentIndex/bf7e1cf4-06ad-4aa1-a067-8b588426054f.vsidx
+/.vs/ChatDBLibrary/FileContentIndex/e2f0b25e-77c8-438d-8916-16419fdff726.vsidx
+/.vs/ChatDBLibrary/v17/.suo
+/.vs/ChatDBLibrary/v17/DocumentLayout.json
+/ChatAppAPI/obj/Debug/net8.0/project.razor.vs.bin
+/ChatAppUI/obj/Debug/net8.0/project.razor.vs.bin
