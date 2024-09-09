@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
@@ -17,3 +17,10 @@
 /.vs/ChatDBLibrary/FileContentIndex/73f58b95-0504-4530-8f89-93bc7d8b3b75.vsidx
 /.vs/ChatDBLibrary/FileContentIndex/a6b33af3-ba41-44be-bb8e-10ddfb57717a.vsidx
 /.vs/ChatDBLibrary/FileContentIndex/881308dc-aad1-486e-b98d-6a83bf3cc992.vsidx
+# Ignore Visual Studio temporary files, build results, and
+# bin, obj folders
+**/bin/
+**/obj/
+.vs/
+*.user
+*.suo
