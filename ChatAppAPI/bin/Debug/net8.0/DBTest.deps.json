@@ -532,10 +532,7 @@
           "Npgsql": "8.0.3"
         },
         "runtime": {
-          "ChatDBLibrary.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "ChatDBLibrary.dll": {}
         }
       },
       "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions/14.0.0.0": {

@@ -15,6 +15,7 @@ builder.Services.AddHttpClient("ServerAPI", client =>
 // Add controllers (MVC services)
 builder.Services.AddControllers();
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

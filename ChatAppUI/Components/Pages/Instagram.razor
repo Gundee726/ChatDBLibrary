@@ -1,6 +1,7 @@
 ﻿@page "/instagram"
 @inject IHttpClientFactory ClientFactory
 @inject HttpClient Http
+@inject IJSRuntime jsRuntime
 @using ChatDBLibrary.Model
 
 <PageTitle>Instagram</PageTitle>
@@ -32,6 +33,7 @@
         <div class="chat-messages">
             @if (messages != null)
             {
+                <p>Messages count: @messages.Count</p> <!-- Debug: Show number of messages -->
                 @if (messages.Any())
                 {
                     @foreach (var message in messages)
@@ -51,6 +53,8 @@
                 <p>Loading messages...</p>
             }
         </div>
+
+
         <div class="chat-input-container">
             <input type="text" @bind="messageInput" @onkeydown="HandleKeyDown" placeholder="Type a message..." />
             <button @onclick="SendMessage">Send</button>
@@ -63,7 +67,7 @@
     private User selectedUser;
     private List<Messages> messages = new();
     private List<User> users = new();
-    private const int CurrentUserId = 2; // The logged-in user's ID
+    private const int CurrentUserId = 1; // The logged-in user's ID
 
     protected override async Task OnInitializedAsync()
     {
@@ -99,7 +103,10 @@
 
             if (response.IsSuccessStatusCode)
             {
-                messages = await response.Content.ReadFromJsonAsync<List<Messages>>();
+                var fetchedMessages = await response.Content.ReadFromJsonAsync<List<Messages>>();
+                messages = fetchedMessages ?? new List<Messages>();
+                Console.WriteLine($"Messages count after loading: {messages.Count}");
+
                 if (messages == null || !messages.Any())
                 {
                     Console.WriteLine("No messages found.");
@@ -117,6 +124,8 @@
             Console.WriteLine($"Error fetching messages: {ex.Message}");
         }
     }
+
+
 
 
     private async Task SendMessage()
@@ -166,23 +175,29 @@
         }
     }
 
-    private async void SelectUser(User user)
+    private async Task SelectUser(User user)
     {
         selectedUser = user;
         Console.WriteLine($"Selected user: {selectedUser.Username}");
         await LoadMessages();
     }
 
+
+    public class User
+    {
+        public int User_id { get; set; }
+        public string Username { get; set; }
+        public string Avatar { get; set; }
+    }
+
     public class Messages
     {
         public int chat_id { get; set; }
-
         public int Sender_id { get; set; }
-
         public int Receiver_id { get; set; }
-
-        public string Message { get; set; }
+        public string? Message { get; set; }
     }
+
 
 
 }
