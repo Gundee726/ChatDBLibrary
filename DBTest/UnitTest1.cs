@@ -8,7 +8,7 @@ namespace DBTest
         [TestMethod]
         public void GetUsers()
         {
-            var userDA = new UserDA("Server=127.0.0.1;Port=5432;Database=postgres;User Id=postgres;Password=heroO726;");
+            var userDA = new UserDA("Server=127.0.0.1;Port=5432;Database=postgres;User Id=postgres;Password=0521;");
             var users = userDA.GetUsers(4);
 
             Assert.IsTrue(users.Count() == 5);

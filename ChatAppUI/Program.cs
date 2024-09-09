@@ -1,7 +1,7 @@
 using ChatAppUI.Components;
 
 var builder = WebApplication.CreateBuilder(args);
-
+//checking
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
