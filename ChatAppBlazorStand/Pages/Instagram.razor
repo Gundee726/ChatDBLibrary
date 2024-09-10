@@ -1,0 +1,179 @@
+﻿@page "/instagram"
+@inject HttpClient Http
+@inject IJSRuntime jsRuntime
+@using ChatDBLibrary.Model
+@namespace ChatAppBlazorStand.Pages
+
+<PageTitle>Instagram</PageTitle>
+
+<link href="css/chatstyles.css" rel="stylesheet" />
+
+<div class="app-container">
+    <nav class="sidebar">
+        <div class="sidebar-header">ChatApp</div>
+        <div class="chat-list">
+            @if (users != null)
+            {
+                @foreach (var user in users)
+                {
+                    <div class="chat-list-item" @onclick="() => SelectUser(user)">
+                        <img src="@user.Avatar" class="chat-list-avatar" alt="@user.Username" />
+                        <div class="chat-list-info">
+                            <div class="chat-list-name">@user.Username</div>
+                            @if (user.LastActiveDate != null)
+                            {
+                                <div class="chat-list-last-active">
+                                    Last Active: @user.LastActiveDate.Value.ToString("g")
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>Loading users...</p>
+            }
+        </div>
+    </nav>
+    <main class="chat-main">
+        <div class="chat-header">@selectedUser?.Username</div>
+        <div class="chat-messages">
+            @if (messages != null)
+            {
+                @if (messages.Any())
+                {
+                    @foreach (var message in messages)
+                    {
+                        <div class="message @(message.Sender_id == CurrentUserId ? "message-sent" : "message-received")">
+                            <span class="message-content">@message.Message</span>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p>No messages found.</p>
+                }
+            }
+            else
+            {
+                <p>Loading messages...</p>
+            }
+        </div>
+
+        <div class="chat-input-container">
+            <input type="text" @bind="messageInput" @onkeydown="HandleKeyDown" placeholder="Type a message..." class="chat-input" />
+            <button @onclick="SendMessage" class="send-button">Send</button>
+        </div>
+    </main>
+</div>
+
+@code {
+    private string messageInput;
+    private User selectedUser;
+    private List<Messages> messages = new();
+    private List<User> users = new();
+    private const int CurrentUserId = 1;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadUsers();
+    }
+
+    private async Task LoadUsers()
+    {
+        try
+        {
+            users = await Http.GetFromJsonAsync<List<User>>($"/api/Users?currentUserId={CurrentUserId}");
+
+            if (users == null || !users.Any())
+            {
+                Console.WriteLine("No users found.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching users: {ex.Message}");
+        }
+    }
+
+    private async Task LoadMessages()
+    {
+        if (selectedUser == null) return;
+
+        try
+        {
+            var response = await Http.GetAsync($"/api/Messages?sender_id={CurrentUserId}&receiver_id={selectedUser.User_id}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                messages = await response.Content.ReadFromJsonAsync<List<Messages>>() ?? new List<Messages>();
+                Console.WriteLine($"Messages count after loading: {messages.Count}");
+
+                if (!messages.Any())
+                {
+                    Console.WriteLine("No messages found.");
+                }
+            }
+            else
+            {
+                Console.WriteLine($"Error fetching messages: {response.ReasonPhrase}");
+            }
+
+            StateHasChanged();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching messages: {ex.Message}");
+        }
+    }
+
+    private async Task SendMessage()
+    {
+        if (!string.IsNullOrWhiteSpace(messageInput) && selectedUser != null)
+        {
+            var messageToSend = messageInput;
+            messageInput = string.Empty;
+
+            messages.Add(new Messages { Sender_id = CurrentUserId, Receiver_id = selectedUser.User_id, Message = messageToSend });
+            StateHasChanged();
+
+            try
+            {
+                var response = await Http.PostAsJsonAsync("/addmessages", new Messages
+                    {
+                        Sender_id = CurrentUserId,
+                        Receiver_id = selectedUser.User_id,
+                        Message = messageToSend
+                    });
+
+                if (response.IsSuccessStatusCode)
+                {
+                    await LoadMessages();
+                }
+                else
+                {
+                    Console.WriteLine($"Error sending message: {response.ReasonPhrase}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error sending message: {ex.Message}");
+            }
+        }
+    }
+
+    private void HandleKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            SendMessage();
+        }
+    }
+
+    private async Task SelectUser(User user)
+    {
+        selectedUser = user;
+        await LoadMessages();
+    }
+}

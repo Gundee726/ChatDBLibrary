@@ -5,12 +5,8 @@ C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\Microsoft.V
 C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\Microsoft.TestPlatform.AdapterUtilities.dll
 C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\appsettings.json
-C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\ChatAppUI.deps.json
-C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\ChatAppUI.runtimeconfig.json
 C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\DBTest.deps.json
 C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\DBTest.runtimeconfig.json
-C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\ChatAppUI.staticwebassets.runtime.json
-C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\ChatAppUI.exe
 C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\ChatAppAPI.staticwebassets.runtime.json
 C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\ChatAppAPI.exe
 C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\ChatAppAPI.deps.json
@@ -126,11 +122,9 @@ C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\ru\Microsof
 C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\tr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
 C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
 C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
-C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\ChatAppUI.dll
 C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\ChatDBLibrary.dll
 C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\DBTest.dll
 C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\Users.dll
-C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\ChatAppUI.pdb
 C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\ChatDBLibrary.pdb
 C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\DBTest.pdb
 C:\Users\DELL\source\repos\ChatDBLibrary\ChatAppAPI\bin\Debug\net8.0\Users.pdb

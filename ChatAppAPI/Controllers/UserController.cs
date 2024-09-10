@@ -19,15 +19,24 @@ namespace ChatAppAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> GetUsers([FromQuery] int currentUserId)
+        public async Task<ActionResult<IEnumerable<UserWithLastActive>>> GetUsers([FromQuery] int currentUserId)
         {
             var users = await _context.Users
-            .Where(u => u.User_id != currentUserId) // Exclude current user
-            .Where(u => _context.chathistory.Any(m =>
-                (m.Sender_id == currentUserId && m.Receiver_id == u.User_id) ||
-                (m.Receiver_id == currentUserId && m.Sender_id == u.User_id)))
-            .ToListAsync();
-
+                .Join(_context.LastActiveDates,
+                      u => u.User_id,
+                      l => l.User_id,
+                      (u, l) => new UserWithLastActive
+                      {
+                          User_id = u.User_id,
+                          Username = u.Username,
+                          Avatar = u.Avatar,
+                          LastActiveDate = l.LastActiveDate 
+                      })
+                .Where(u => u.User_id != currentUserId)
+                .Where(u => _context.chathistory.Any(m =>
+                    (m.Sender_id == currentUserId && m.Receiver_id == u.User_id) ||
+                    (m.Receiver_id == currentUserId && m.Sender_id == u.User_id)))
+                .ToListAsync();
 
             if (!users.Any())
             {
@@ -36,6 +45,13 @@ namespace ChatAppAPI.Controllers
 
             return Ok(users);
         }
+    }
 
+    public class UserWithLastActive
+    {
+        public int User_id { get; set; }
+        public string Username { get; set; }
+        public string Avatar { get; set; }
+        public DateTime LastActiveDate { get; set; }
     }
 }

@@ -908,27 +908,6 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "ChatAppUI/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "ChatDBLibrary": "1.0.0",
-          "DBTest": "1.0.0",
-          "Microsoft.AspNetCore.SignalR.Client": "8.0.7",
-          "Npgsql": "8.0.3",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4",
-          "Users": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/ChatAppUI.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ChatAppUI.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
       "ChatDBLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -2559,11 +2538,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "ChatAppUI/1.0.0": {
-      "type": "project",
-      "path": "../ChatAppUI/ChatAppUI.csproj",
-      "msbuildProject": "../ChatAppUI/ChatAppUI.csproj"
-    },
     "ChatDBLibrary/1.0.0": {
       "type": "project",
       "path": "../ChatDBLibrary/ChatDBLibrary.csproj",
@@ -2582,10 +2556,10 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "ChatAppUI >= 1.0.0",
       "ChatDBLibrary >= 1.0.0",
       "DBTest >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 8.0.8",
+      "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.4",
       "Swashbuckle.AspNetCore >= 6.4.0",
       "Swashbuckle.AspNetCore.Swagger >= 6.7.0",
       "Users >= 1.0.0"
@@ -2623,9 +2597,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\ChatAppUI.csproj": {
-              "projectPath": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatAppUI\\ChatAppUI.csproj"
-            },
             "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatDBLibrary\\ChatDBLibrary.csproj": {
               "projectPath": "C:\\Users\\DELL\\source\\repos\\ChatDBLibrary\\ChatDBLibrary\\ChatDBLibrary.csproj"
             },
@@ -2656,6 +2627,10 @@
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[8.0.8, )"
+          },
+          "Npgsql.EntityFrameworkCore.PostgreSQL": {
+            "target": "Package",
+            "version": "[8.0.4, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

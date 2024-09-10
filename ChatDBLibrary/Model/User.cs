@@ -15,6 +15,7 @@ namespace ChatDBLibrary.Model
         public string Username { get; set; }
         [Column("avatar")]
         public string Avatar { get; set; }
+        public DateTime? LastActiveDate { get; set; }
     }
 
     public class CurrentUserRequest
@@ -26,6 +27,14 @@ namespace ChatDBLibrary.Model
     {
         public int Sender_id { get; set; }
         public int Receiver_id { get; set; }
+    }
+
+    public class LastActiveDates
+    {
+        [Column("user_id")]
+        public int User_id { get; set; }
+        [Column("last_active_date")]
+        public DateTime LastActiveDate { get; set; } 
     }
 
     public class Messages
