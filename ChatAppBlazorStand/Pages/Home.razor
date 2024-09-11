@@ -1,7 +1,154 @@
 ﻿@page "/"
+@using System.ComponentModel.DataAnnotations
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject IJSRuntime JS
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Login</PageTitle>
 
-<h1>Hello, world!</h1>
+<style>
+    .container {
+        display: flex;
+        height: 90vh; 
+        width: 80vw; 
+        background: linear-gradient(to right, #f78fb3, #a390f5); 
+        justify-content: center;
+        align-items: center;
+    }
 
-Welcome to your new app.
+    .right-panel {
+        width: 100%;
+        max-width: 300px; 
+        background-color: white;
+        padding: 40px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 10px; 
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+    .login-btn {
+        width: 100%;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+        .login-btn:hover {
+            background-color: #0056b3;
+        }
+
+    .error-message {
+        color: red;
+        margin-top: 10px;
+    }
+</style>
+
+
+<div class="container">
+    <div class="right-panel">
+        <h2>Login</h2>
+        <p>Welcome! Login to chat with people you love!</p>
+
+        <!-- Form for login -->
+        <EditForm Model="@loginModel" OnValidSubmit="HandleLogin" FormName="loginForm">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="form-group">
+                <InputText class="form-control" placeholder="User Name" @bind-Value="loginModel.Username" />
+            </div>
+
+            <div class="form-group">
+                <InputText class="form-control" placeholder="Password" @bind-Value="loginModel.Password" type="password" />
+            </div>
+
+            <div class="error-message">@validationMessage</div>
+
+            <!-- Corrected button to trigger form submission -->
+            <button type="submit" class="login-btn">LOGIN</button>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    private LoginModel loginModel = new LoginModel();
+    private string validationMessage;
+
+    // Handle the form submission for login
+    private async Task HandleLogin()
+    {
+        Console.WriteLine(loginModel);
+        // Log the input values to the browser console
+        await JS.InvokeVoidAsync("console.log", $"Username: {loginModel.Username}, Password: {loginModel.Password}");
+
+        // Validate login credentials
+        if (string.IsNullOrEmpty(loginModel.Username) || string.IsNullOrEmpty(loginModel.Password))
+        {
+            validationMessage = "Both fields are required.";
+            return;
+        }
+
+        // Call the API to send the login data
+        try
+        {
+            var response = await Http.PostAsJsonAsync("api/users/login", loginModel);
+
+            if (response.IsSuccessStatusCode)
+            {
+                // Handle successful login
+                var result = await response.Content.ReadFromJsonAsync<LoginResponse>();
+                await JS.InvokeVoidAsync("console.log", $"Login successful, userId: {result.UserId}");
+
+                // Automatically navigate to Instagram after successful login
+                Navigation.NavigateTo("/instagram");
+            }
+            else
+            {
+                // Log and display the error response
+                var errorResponse = await response.Content.ReadAsStringAsync();
+                validationMessage = $"Login failed: {errorResponse}";
+                await JS.InvokeVoidAsync("console.log", $"Login failed, response: {errorResponse}");
+            }
+        }
+        catch (Exception ex)
+        {
+            // Handle any exceptions that may occur and display an error message
+            validationMessage = $"Error occurred during login: {ex.Message}";
+            await JS.InvokeVoidAsync("console.log", $"Exception during login: {ex}");
+        }
+    }
+
+    // Model class for login
+    public class LoginModel
+    {
+        [Required(ErrorMessage = "Username is required")]
+        public string Username { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Password is required")]
+        public string Password { get; set; } = string.Empty;
+    }
+
+    // Model class for the API response
+    public class LoginResponse
+    {
+        public string Message { get; set; }
+        public int UserId { get; set; }
+    }
+}

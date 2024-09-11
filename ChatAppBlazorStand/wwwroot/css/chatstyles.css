@@ -1,58 +1,20 @@
 ﻿.app-container {
     display: flex;
-    height: 100vh;
+    height: 90vh;
+    width: 80vw; /* Full width */
 }
 
 .sidebar {
     width: 300px;
     background-color: #f0f0f0;
-    padding: 10px;
-}
-
-.sidebar-header {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.chat-list {
-    overflow-y: auto;
-}
-
-.chat-list-item {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    cursor: pointer;
-    border-bottom: 1px solid #ccc;
-}
-
-.chat-list-item:hover {
-    background-color: #e0e0e0;
-}
-
-.chat-list-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.chat-list-info {
-    flex-grow: 1;
-}
-
-.chat-list-name {
-    font-size: 16px;
-    font-weight: bold;
 }
 
 .chat-main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    border-left: 1px solid #ccc;
+    margin-left: 0; /* Remove any unintended margin */
+    padding: 0; /* Set padding to 0 to use full width */
 }
 
 .chat-header {
@@ -69,24 +31,6 @@
     padding: 20px;
     overflow-y: auto;
     background-color: #f9f9f9;
-}
-
-.message {
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.message-sent {
-    background-color: #007bff;
-    color: black;
-    align-self: flex-end;
-}
-
-.message-received {
-    background-color: #e0e0e0;
-    color: black;
-    align-self: flex-start;
 }
 
 .chat-input-container {
